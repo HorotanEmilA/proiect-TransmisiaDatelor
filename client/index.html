@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta content="utf-8" http-equiv="encoding" />
+  <title>Fresh Vegetables!!!</title> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/vue-material.css" />
+  <script type="text/javascript" src="libs/vue.js"></script>
+  <script type="text/javascript" src="libs/vue-material.js"></script>
+  <script type="text/javascript" src="libs/axios.js"></script>
+  <script type="text/javascript" src="src/users-service.js"></script> 
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="title">Fresh Vegetables:</div> 
+
+    <p style="text-align: center" v-if="vegetables.length == 0">No vegetables found</p>
+
+    <ul class="user-list" v-if="vegetables.length > 0">
+      <li>
+        <div class="user-row-header">
+          <div class="user-name">Name</div>
+          <div class="user-city">Price</div>
+        </div>
+      </li>
+
+      <li v-for="vegetable in vegetables">
+        <br> <!-- Add a line break before each vegetable -->
+        <div class="">
+          <a :href="'details.html?id='+vegetable.id"><b>{{ vegetable.name }}</b></a> <!-- Update link to details.html -->
+          <br> 
+          <span class=""><b><i>{{ vegetable.price }}$ /kg</i></b></span> <!-- Update price -->
+            <img v-bind:src="'http://127.0.0.1:4300/' + vegetable.img"/> <!-- Update image source -->
+          <button v-on:click="deleteVegetable(vegetable.id)">Delete</button> <!-- Update delete button -->
+          <a :href="'update.html?id='+vegetable.id" target="_self">Update</a> <!-- Update link to update.html -->
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script src="src/app.js"></script>
+</body>
+
+</html>

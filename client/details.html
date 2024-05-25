@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/details.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/vue-material.css" />
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <div id="details">
+        <h1>Details for Vegetable with ID: {{ id }}</h1>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Name:</div>
+            <div class="value">{{ vegetable.name }}</div> <!-- Update variable name to vegetable -->
+        </div>
+        <div class="container">
+            <div class="label">Price:</div>
+            <div class="value">{{ vegetable.price }}</div> <!-- Update variable name to vegetable -->
+        </div>
+        <div class="container">
+            <div class="label">Color:</div>
+            <div class="value">{{ vegetable.color }}</div> <!-- Update variable name to vegetable -->
+        </div>
+        <div class="container">
+            <div class="label">Description:</div>
+            <div class="value">{{ vegetable.description }}</div> <!-- Add this block to display description -->
+        </div>
+        <div class="container">
+            <div class="label">Stock:</div>
+            <div class="value">{{ vegetable.stock }}</div> <!-- Add this block to display stock -->
+        </div>
+        <div class="container">
+            <div class="label">Country of Origin:</div>
+            <div class="value">{{ vegetable.country_of_origin }}</div> <!-- Add this block to display country_of_origin -->
+        </div>
+        <div class="container">
+            <div class="label">Batch Import Date:</div>
+            <div class="value">{{ vegetable.batch_import_date }}</div> <!-- Add this block to display batch_import_date -->
+        </div>
+        <div class="container">
+            <div class="label">Batch Expiration Date:</div>
+            <div class="value">{{ vegetable.batch_expiration_date }}</div> <!-- Add this block to display batch_expiration_date -->
+        </div>
+    </div>
+    <script src="src/details.js"></script>
+</body>
+
+</html>

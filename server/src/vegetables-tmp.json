@@ -1,0 +1,24 @@
+[
+  {
+      "name": "Carrot",
+      "color": "Orange",
+      "price": "1.99",
+      "description": "Fresh and crunchy carrot",
+      "img": "carrot.jpg",
+      "stock": 100,
+      "country_of_origin": "USA",
+      "batch_import_date": "2024-05-01",
+      "batch_expiration_date": "2024-06-01"
+  },
+  {
+      "name": "Broccoli",
+      "color": "Green",
+      "price": "2.49",
+      "description": "Nutritious green broccoli",
+      "img": "broccoli.jpg",
+      "stock": 150,
+      "country_of_origin": "Mexico",
+      "batch_import_date": "2024-04-15",
+      "batch_expiration_date": "2024-05-15"
+  }
+]
